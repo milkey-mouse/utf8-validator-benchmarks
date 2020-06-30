@@ -1,0 +1,24 @@
+[package]
+name = "utf8-validator-benchmarks"
+authors = ["Milkey Mouse <milkeymouse@meme.institute>"]
+license = "CC0-1.0"
+version = "0.1.0"
+edition = "2018"
+publish = false
+
+[features]
+default = ["cpb"]
+cpb = ["criterion-cycles-per-byte"]
+
+[dependencies]
+criterion = "0.3.3"
+simdjson-utf8-validators = { path = "../simdjson-utf8-validators" }
+faster-utf8-validator = { path = "../faster-utf8-validator-rs" }
+
+[target.'cfg(any(target_arch = "x86_64", target_arch = "x86"))'.dependencies.criterion-cycles-per-byte]
+version = "0.1.1"
+optional = true
+
+[[bench]]
+name = "criterion_bench"
+harness = false

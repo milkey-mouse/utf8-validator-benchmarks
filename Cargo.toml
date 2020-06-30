@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+    "faster-utf8-validator-rs",
+    "simdjson-utf8-validators",
+    "utf8-validator-benchmarks",
+]

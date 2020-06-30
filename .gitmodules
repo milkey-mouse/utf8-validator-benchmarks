@@ -1,0 +1,6 @@
+[submodule "simdjson-utf8-validators/src/simdjson"]
+	path = simdjson
+	url = https://github.com/simdjson/simdjson
+[submodule "faster-utf8-validator-rs"]
+	path = faster-utf8-validator-rs
+	url = https://github.com/simd-lite/faster-utf8-validator-rs
